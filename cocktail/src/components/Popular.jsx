@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import {Splide, SplideSlide} from '@splidejs/react-splide';
+import "@splidejs/react-splide/css";
 
 function Popular() {
     const [cocktails, setCocktail] = useState([]);
@@ -10,141 +12,112 @@ function Popular() {
     },[]);
 
     const getCocktail = async () => {
-        const api = await fetch(
-            `https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}`
-            );
-        const data = await api.json();
-        setCocktail(data.drinks);
-        console.log(data);
+
+        const check = localStorage.getItem('popular');
+
+        if(check){
+            setCocktail(JSON.parse(check));
+        }else{
+            Promise.all([
+                fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}`).then(value => value.json()),
+                fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}`).then(value => value.json()),
+                fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}`).then(value => value.json()),
+                fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}`).then(value => value.json()),
+                fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}`).then(value => value.json())
+            ])
+                .then((value) =>{
+                    var objectCopy = JSON.parse(JSON.stringify(value[0]));
+                    var objectCopy1 = JSON.parse(JSON.stringify(value[1]));
+                    var objectCopy2 = JSON.parse(JSON.stringify(value[2]));
+                    var objectCopy3 = JSON.parse(JSON.stringify(value[3]));
+                    var objectCopy4 = JSON.parse(JSON.stringify(value[4]));
+                    const final = [objectCopy.drinks[0], objectCopy1.drinks[0], objectCopy2.drinks[0], objectCopy3.drinks[0], objectCopy4.drinks[0]];
+                    localStorage.setItem("popular", JSON.stringify(final))
+                    setCocktail(final);
+                    console.log(final);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        }
     };
 
-    // Promise.all([
-    //     fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}&number=9`).then(value => value.json()),
-    //     fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}&number=9`).then(value => value.json()),
-    //     fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}&number=9`).then(value => value.json()),
-    //     fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}&number=9`).then(value => value.json()),
-    //     fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}&number=9`).then(value => value.json()),
-    //     fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}&number=9`).then(value => value.json()),
-    //     fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}&number=9`).then(value => value.json()),
-    //     fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}&number=9`).then(value => value.json()),
-    //     fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}&number=9`).then(value => value.json())
-    //     ])
-    //     .then((value) =>{
-    //         console.log(value)
-    //         setCocktail(value);
-    //     })
-    //     .catch((err) => {
-    //         console.log(err);
-    //     });
 
 
-
-  return (
-    <div>
-    {
-        cocktails.map((drink) => {
-            const {
-                idDrink,
-                strDrink,
-                strCategory,
-                strDrinkThumb,
-                strInstructions,
-            } = drink;
-            return (
-                <div key={idDrink}>
-
-                <Wrapper>
-                    <h3>Popular Picks</h3>
-                    
-                    {cocktails.map((drink) => {
-                        return(
-
+    return (
+        <div>
+            <Wrapper>
+                <h3>Popular Picks</h3>
+                <Splide options={{
+                    perPage: 4,
+                    arrows: true,
+                    pagination: false,
+                    drag: "free",
+                    gap: "5rem",
+                }}> 
+                {cocktails.map((drink) => {
+                    return(
+                        <SplideSlide key ={drink.idDrink}>
                             <Card>
-                            <p>{drink.title}</p>
-                            <h2>{strDrink}</h2>
-                            <img src={strDrinkThumb} alt={strDrink} />
-                            <h5>{strCategory}</h5>
-                            <p>{strInstructions}</p>
+                            <Gradient/>
+                                <div key={drink.idDrink}>
+                                <p>{drink.strDrink}</p>
+                                <img src={drink.strDrinkThumb} alt={drink.strDrink} />
+                                <p>{Object.keys(drink)[0].strDrink}</p>
+                                </div>
                             </Card>
-                        );
-                    })};
-                </Wrapper>
-            </div>
-            );
-        })};
-    </div>
-  )
-}
+                        </SplideSlide>
+                    );
+                })};
+                </Splide>
+            </Wrapper>
+        </div>
+      );
+    }
 
     const Wrapper = styled.div`
       margin: 4rem 0rem
     `
 
     const Card = styled.div`
-      min-height: 25rem;
+      min-height: 0rem;
       border-radius: 2rem;
       overflow: hidden;
+      position: relative;
 
       img{
         border-radius: 2rem;
+        postion: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
+      p{
+        position: absolute;
+        z-index: 10;
+        left: 50%;
+        bottom: 0%;
+        transform: translate(-40%, 50%);
+        color: white;
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1rem;
+        height: 40%;
+        display: flex;
+        justify-content: center
+        align-items: center;
+      }
+    `;
+    //transform: translateY(-125px);
+    const Gradient = styled.div`
+      border-radius: 2rem;
+      z-index: 3;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
     `
 
 export default Popular;
-
-
-    //useEffect(() => {
-    //    getPopular();
-    //}, []);
-/*
-    const getPopular = async () => {
-        const api = await 
-        fetch("www.thecocktaildb.com/api/json/v1/1/random.php")
-        //const data = await api.json();
-        //console.log(data);
-        //setCocktails(data.recipes)
-        .then((results) => results.json())
-        .then ((data) => {
-            setCocktails(data.drinks);
-        });
-    };
-
-
-
-    useEffect(() => {
-        getPopular();
-    }, []);
-
-    const getPopular = async () => {
-        const api = await fetch(
-            "www.thecocktaildb.com/api/json/v1/1/random.php"
-            );
-        const data = await api.json();
-        //console.log(data);
-        setCocktails(data.drinks);
-    };
-
-
-
-                <div key={idDrink}>
-                <h2>{strDrink}</h2>
-                <img src={strDrinkThumb} alt={strDrink} />
-                <h5>{strCategory}</h5>
-                <p>{strInstructions}</p>
-            </div>
-
-
-*/
-
-
-// useEffect(() => {
-//     for (let i = 0; i < 9; i++) {
-//         fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-//         .then((results) => results.json())
-//         .then ((results) => {
-//             setCocktails(results.drinks);
-//             console.log(results.drinks);
-//         });
-//     }
-// }, []);
-

@@ -1,4 +1,4 @@
-import Veggie from "../components/Veggie";
+import Vodka from "../components/Vodka";
 import Popular from "../components/Popular";
 
 
@@ -7,8 +7,8 @@ import React from 'react'
 function Home() {
   return (
     <div>
-        <Veggie />
         <Popular />
+        <Vodka />
     </div>
   )
 }
