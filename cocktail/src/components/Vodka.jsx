@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import {Splide, SplideSlide} from '@splidejs/react-splide';
 import "@splidejs/react-splide/css";
+import {Link} from "react-router-dom";
 
 function Vodka() {
   const [vodkas, setVodka] = useState([]);
@@ -47,13 +48,12 @@ function Vodka() {
           return(
               <SplideSlide key ={drink.idDrink}>
                 <Card>
-                <Gradient/>
-                    <div key={drink.idDrink}>
+                  <Link to={'/recipe/' + drink.idDrink}>
+                  <Gradient/>
                     <p>{drink.strDrink}</p>
                     <img src={drink.strDrinkThumb} alt={drink.strDrink} />
                     <p>{Object.keys(drink)[0].strDrink}</p>
-                    </div>
-                    
+                  </Link>
                 </Card>
               </SplideSlide>
           );
@@ -65,7 +65,7 @@ function Vodka() {
 }
 
 const Wrapper = styled.div`
-      margin: 2rem 0rem
+      margin: 2rem 0rem;
     `
 
     const Card = styled.div`

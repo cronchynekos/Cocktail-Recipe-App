@@ -1,47 +1,42 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components';
-import {motion} from 'framer-motion';
-import {Link, useParams} from "react-router-dom";
+import {useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-function Drinks() {
 
-    const [drinks, setDrinks] = useState([]);
+function Searched() {
+
+    const [searchedDrinks, setSearchedDrinks] = useState([]);
     let params = useParams();
 
-    const getDrinks = async (name) => {
-        const data = await fetch (`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${name}`)
+    const getSearched = async (name) => {
+        const data = await fetch (`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`)
         const recipes = await data.json();
-        setDrinks(recipes.drinks)
+        setSearchedDrinks(recipes.drinks)
     };
 
-useEffect(() => {
-    getDrinks(params.type)
-    console.log(params.type);
-}, [params.type]);
+    useEffect(() => {
+        getSearched(params.search);
+    }, [params.search])
 
   return (
-    <Grid
-    animate={{opacity: 1}}
-    initial={{opacity: 0}}
-    exit={{opacity: 0}}
-    transition={{duration: 0.5}}
-    >
-        {drinks.map((item) => {
-            return(
+    <Grid>
+        {searchedDrinks.map((item) => {
+            return (
                 <Card key={item.idDrink}>
                     <Link to={'/recipe/' + item.idDrink}>
                     <img src={item.strDrinkThumb} alt="" />
                     <h4>{item.strDrink}</h4>
                     </Link>
                 </Card>
-            );
+            )
         })}
     </Grid>
   )
 }
 
-
-const Grid = styled(motion.div)`
+const Grid = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     grid-gap: 3rem;
@@ -60,4 +55,4 @@ const Card = styled.div`
     }
 `
 
-export default Drinks
+export default Searched
