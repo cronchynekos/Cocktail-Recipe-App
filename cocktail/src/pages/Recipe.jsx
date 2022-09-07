@@ -22,7 +22,7 @@ function Recipe() {
   return (
     <DetailWrapper>
       <div>
-        <p>{details.strDrink}</p>
+        <h4>{details.strDrink}</h4>
         <img src={details.strDrinkThumb} alt="" />
       </div>
       <Info>
@@ -35,11 +35,14 @@ function Recipe() {
           {activeTab === 'instructions' && (
               <div>
               <h3>{details.strTags}</h3>
+              <h3>{details.strCategory}</h3>
+              <h3>{details.strAlcoholic}</h3>
               <h3>{details.strInstructions}</h3>
             </div>
           )} 
           {activeTab === 'ingredients' && (
             <div>
+              <h3>Glass: {details.strGlass}</h3>
               <h3>{details.strMeasure1}  {details.strIngredient1}</h3>
               <h3>{details.strMeasure2}  {details.strIngredient2}</h3>
               <h3>{details.strMeasure3}  {details.strIngredient3}</h3>
@@ -47,6 +50,9 @@ function Recipe() {
               <h3>{details.strMeasure5}  {details.strIngredient5}</h3>
               <h3>{details.strMeasure6}  {details.strIngredient6}</h3>
               <h3>{details.strMeasure7}  {details.strIngredient7}</h3>
+              <h3>{details.strMeasure8}  {details.strIngredient8}</h3>
+              <h3>{details.strMeasure9}  {details.strIngredient9}</h3>
+              <h3>{details.strMeasure10}  {details.strIngredient10}</h3>
             </div>
           )}
       </Info>
@@ -65,6 +71,20 @@ const DetailWrapper = styled.div`
   }
   h2{
     margin-bottom: 2rem;
+  }
+  h3{
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 1rem;
+    font-weight: 600;
+    height: 40%;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+  }
+  h4{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem;
   }
   li{
     font-size: 1.2rem;
