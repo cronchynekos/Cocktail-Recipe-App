@@ -77,7 +77,7 @@ function Popular() {
     }
 
     const Wrapper = styled.div`
-      margin: 4rem 0rem
+      margin: 1.3rem 0rem
     `
 
     const Card = styled.div`
@@ -85,7 +85,9 @@ function Popular() {
       border-radius: 2rem;
       overflow: hidden;
       position: relative;
-
+      &:hover {
+        filter: brightness(1.2);
+      }
       img{
         border-radius: 2rem;
         postion: absolute;
@@ -104,7 +106,7 @@ function Popular() {
         width: 100%;
         text-align: center;
         font-weight: 600;
-        font-size: 1rem;
+        font-size: 1.2rem;
         height: 40%;
         display: flex;
         justify-content: center

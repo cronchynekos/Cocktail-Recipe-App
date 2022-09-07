@@ -58,6 +58,9 @@ const Card = styled.div`
         text-align: center;
         padding: 1rem;
     }
+    &:hover {
+        filter: brightness(1.1);
+      }
 `
 
 export default Drinks

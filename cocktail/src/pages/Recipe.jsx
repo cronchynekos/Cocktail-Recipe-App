@@ -102,6 +102,9 @@ const Button = styled.button`
   border: 2px solid black;
   margin-right: 2rem;
   font-weight: 600;
+  &:hover {
+    filter: brightness(1.2);
+  }
 `
 
 const Info = styled.div`

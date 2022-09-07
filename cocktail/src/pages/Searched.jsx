@@ -40,6 +40,7 @@ const Grid = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     grid-gap: 3rem;
+    
 `;
 const Card = styled.div`
     img{
@@ -53,6 +54,7 @@ const Card = styled.div`
         text-align: center;
         padding: 1rem;
     }
+    
 `
 
 export default Searched

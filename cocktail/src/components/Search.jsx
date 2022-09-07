@@ -33,6 +33,7 @@ const FormStyle = styled.form`
     div{
         position: relative;
         width: 100%;
+        transform: translate(-280px);
     }
     input{
         border: none;
@@ -43,8 +44,8 @@ const FormStyle = styled.form`
         border: none;
         border-radius: 1rem;
         outline: none;
-        width 100%;
-
+        width: 20%;
+        transition: width .5s ease-in-out;
     }
     svg{
         position: absolute;
@@ -52,6 +53,10 @@ const FormStyle = styled.form`
         left: 0%;
         transform: translate(100%, -50%);
         color: white;
+        font-size: 1rem;
+    }
+    input: hover {
+        width: 130%;
     }
 `
 

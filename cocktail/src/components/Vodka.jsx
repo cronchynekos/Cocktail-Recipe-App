@@ -65,7 +65,7 @@ function Vodka() {
 }
 
 const Wrapper = styled.div`
-      margin: 2rem 0rem;
+      margin: 2rem 0rem
     `
 
     const Card = styled.div`
@@ -74,13 +74,15 @@ const Wrapper = styled.div`
       border-radius: 1.5rem;
       overflow: hidden;
       position: relative;
-
+      &:hover {
+        filter: brightness(1.2);
+      }
       img{
-        transform: translate(-30px);
+        transform: translate(0px);
         border-radius: 1.5rem;
         postion: absolute;
         left: 50%;
-        width: 130%;
+        width: 100%;
         height: 100%;
         object-fit: cover;
       }
