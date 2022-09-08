@@ -15,7 +15,7 @@ function App() {
         <Nav>
           <BiDrink />
           <Logo to={"/"}>Cocktails</Logo>
-
+          <BiDrink />
           <Search /> 
         </Nav>
         <Category />
@@ -23,13 +23,13 @@ function App() {
         </BrowserRouter>
       </div>
     </div>
-
   );
 }
 
 const Logo = styled(Link)`
+  transform: translate(0px);
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 400;
   font-family: 'Lobster Two', cursive;
 `;
@@ -39,9 +39,10 @@ const Nav = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: black;
+  border-radius: 0% 0% 2% 2%;
+  background: linear-gradient(35deg, #808080, #dadada);
   svg{
-    font-size: 2rem;
+    font-size: 1rem;
   }
 `;
 

@@ -29,18 +29,18 @@ function Search() {
 
 
 const FormStyle = styled.form`
-    margin: 0rem 20rem;
+    margin: 0rem 70rem;
     div{
         position: relative;
         width: 100%;
-        transform: translate(-280px);
+        transform: translate(0px);
     }
     input{
         border: none;
         background: linear-gradient(35deg, #494949, #313131);
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: white;
-        padding: 1rem 3rem;
+        padding: 1rem 2rem;
         border: none;
         border-radius: 1rem;
         outline: none;
@@ -56,7 +56,7 @@ const FormStyle = styled.form`
         font-size: 1rem;
     }
     input: hover {
-        width: 130%;
+        width: 400%;
     }
 `
 

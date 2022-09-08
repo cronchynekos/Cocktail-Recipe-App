@@ -42,8 +42,14 @@ function Vodka() {
           arrows: true,
           pagination: false,
           drag: "free",
-          gap: "5rem",
+          gap: "4rem",
+          perMove: 1,
+          height: 230,
+          autoplay: true,
+          interval: 5000,
+          type: 'loop',
       }}> 
+      
       {vodkas.map((drink) => {
           return(
               <SplideSlide key ={drink.idDrink}>
@@ -65,7 +71,13 @@ function Vodka() {
 }
 
 const Wrapper = styled.div`
-      margin: 2rem 0rem
+      margin: 0% 15%;
+      h3{
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     `
 
     const Card = styled.div`
@@ -74,6 +86,8 @@ const Wrapper = styled.div`
       border-radius: 1.5rem;
       overflow: hidden;
       position: relative;
+      box-shadow: 10px 10px lightblue;
+      border-radius: 5% 20%;
       &:hover {
         filter: brightness(1.2);
       }
@@ -81,6 +95,7 @@ const Wrapper = styled.div`
         transform: translate(0px);
         border-radius: 1.5rem;
         postion: absolute;
+        border-radius: 5% 20%;
         left: 50%;
         width: 100%;
         height: 100%;
@@ -91,7 +106,7 @@ const Wrapper = styled.div`
         z-index: 10;
         left: 50%;
         bottom: 0%;
-        transform: translate(-40%, 50%);
+        transform: translate(-50%, 20%);
         color: white;
         width: 100%;
         text-align: center;
@@ -99,7 +114,7 @@ const Wrapper = styled.div`
         font-size: 1rem;
         height: 40%;
         display: flex;
-        justify-content: center
+        justify-content: center;
         align-items: center;
       }
     `;
@@ -107,10 +122,13 @@ const Wrapper = styled.div`
     const Gradient = styled.div`
       z-index: 3;
       position: absolute;
+      border-radius: 5% 20%;
       width: 100%;
       height: 100%;
       background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2));
       border-radius: 1.5rem;
     `
+
+    
 
 export default Vodka;

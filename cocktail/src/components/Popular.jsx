@@ -54,7 +54,12 @@ function Popular() {
                     arrows: true,
                     pagination: false,
                     drag: "free",
-                    gap: "5rem",
+                    gap: "4rem",
+                    perMove: 1,
+                    height: 230,
+                    autoplay: true,
+                    interval: 4000,
+                    type: 'loop',
                 }}> 
                 {cocktails.map((drink) => {
                     return(
@@ -77,31 +82,41 @@ function Popular() {
     }
 
     const Wrapper = styled.div`
-      margin: 1.3rem 0rem
+      margin: 0% 15%;
+      h3{
+        font-size: 1.5rem;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+      overflow: visible;
     `
 
     const Card = styled.div`
       min-height: 0rem;
-      border-radius: 2rem;
-      overflow: hidden;
+      border-radius: 5% 20%;
       position: relative;
+      box-shadow: 10px 10px lightblue;
+      overflow: visible;
+      transform: translate(0px, 0px);
       &:hover {
         filter: brightness(1.2);
       }
       img{
-        border-radius: 2rem;
         postion: absolute;
+        border-radius: 5% 20%;
         left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        overflow: visible;
       }
       p{
         position: absolute;
         z-index: 10;
         left: 50%;
         bottom: 0%;
-        transform: translate(-40%, 50%);
+        transform: translate(-50%, 0%);
         color: white;
         width: 100%;
         text-align: center;
@@ -109,13 +124,13 @@ function Popular() {
         font-size: 1.2rem;
         height: 40%;
         display: flex;
-        justify-content: center
+        justify-content: center;
         align-items: center;
       }
     `;
     //transform: translateY(-125px);
     const Gradient = styled.div`
-      border-radius: 2rem;
+      border-radius: 5% 20%;
       z-index: 3;
       position: absolute;
       width: 100%;

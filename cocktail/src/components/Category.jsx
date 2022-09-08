@@ -40,10 +40,11 @@ function Category() {
 const List = styled.div`
     display: flex;
     justify-content: center;
-    margin: 1.5rem 2rem;
+    margin: 1rem 1rem;
 `;
 
 const Slink = styled(NavLink)`
+box-shadow: 6px 6px lightblue;
     display: flex;
     flex-direction: column;
     justify-content: center;

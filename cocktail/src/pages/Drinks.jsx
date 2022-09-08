@@ -45,8 +45,13 @@ const Grid = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     grid-gap: 3rem;
+    border-radius: 5% 20%;
+    margin: 0% 12%;
+
 `;
 const Card = styled.div`
+    border-radius: 5% 20%;
+    box-shadow: 10px 10px lightblue;
     img{
         width: 100%;
         border-radius: 2rem;
