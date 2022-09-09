@@ -43,23 +43,23 @@ function Popular() {
         }
     };
 
-
-
     return (
         <div>
             <Wrapper>
                 <h3>Popular Picks</h3>
                 <Splide options={{
-                    perPage: 4,
-                    arrows: true,
+                    perPage  : 4,
+                    arrows   : true,
                     pagination: false,
-                    drag: "free",
-                    gap: "4rem",
-                    perMove: 1,
-                    height: 230,
-                    autoplay: true,
-                    interval: 4000,
-                    type: 'loop',
+                    drag     : "free",
+                    gap      : "4rem",
+                    perMove  : 1,
+                    height   : 230,
+                    autoplay : true,
+                    interval : 4000,
+                    type     : 'loop',
+                    focus    : 'center',
+                    snap     : true,
                 }}> 
                 {cocktails.map((drink) => {
                     return(
