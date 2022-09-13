@@ -26,9 +26,8 @@ h1 {
   
 }
 
-p {
-  font-size: 1.5rem;
-  text-shadow: 4px 4px 6px black;
+p{
+
 }
 
 h4{
@@ -73,7 +72,11 @@ body::-webkit-scrollbar-thumb {
   background-attachment: fixed;
   background-position: center center;
   opacity: .95;
-  
+}
+
+.hero p {
+  font-size: 1.5rem;
+  text-shadow: 4px 4px 6px black;
 }
 
 .backgroundShape {
@@ -81,3 +84,48 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   background: linear-gradient(35deg, LightGray, LightSteelBlue);
 }
+
+footer{
+  background: linear-gradient(35deg, #494949, #313131);
+  height: auto;
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-content h3{
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+.footer-content p{
+  font-size: .75rem;
+}
+
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials li{
+  margin: 0 10px;
+}
+
+.socials a{
+  text-decoration: none;
+  color: white;
+}
+

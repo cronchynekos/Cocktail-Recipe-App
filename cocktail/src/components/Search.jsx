@@ -29,7 +29,8 @@ function Search() {
 
 
 const FormStyle = styled.form`
-    margin: 0rem 10rem;
+    margin-left: auto;
+    margin-right: 0;
     div{
         position: relative;
         width: 100%;
@@ -56,7 +57,7 @@ const FormStyle = styled.form`
         font-size: 1rem;
     }
     input: hover {
-        width: 400%;
+        width: 100%;
     }
 `
 

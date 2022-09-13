@@ -51,7 +51,7 @@ const Grid = styled(motion.div)`
 `;
 const Card = styled.div`
     border-radius: 5% 20%;
-    box-shadow: 10px 10px lightblue;
+    box-shadow: 10px 10px DarkSeaGreen;
     img{
         width: 100%;
         border-radius: 2rem;
