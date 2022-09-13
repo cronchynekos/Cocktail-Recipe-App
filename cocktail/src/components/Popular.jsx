@@ -51,7 +51,6 @@ function Popular() {
                     perPage  : 4,
                     arrows   : true,
                     pagination: false,
-<<<<<<< HEAD
                     drag: "free",
                     gap: "4rem",
                     perMove: 1,
@@ -59,17 +58,6 @@ function Popular() {
                     autoplay: true,
                     interval: 4000,
                     type: 'loop',
-=======
-                    drag     : "free",
-                    gap      : "4rem",
-                    perMove  : 1,
-                    height   : 230,
-                    autoplay : true,
-                    interval : 4000,
-                    type     : 'loop',
-                    focus    : 'center',
-                    snap     : true,
->>>>>>> 3b2b9230080cd1e77f03925cb9d9476b77760d9b
                 }}> 
                 {cocktails.map((drink) => {
                     return(
