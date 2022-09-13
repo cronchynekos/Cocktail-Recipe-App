@@ -81,6 +81,7 @@ function Popular() {
 
     const Wrapper = styled.div`
       margin: 0% 15%;
+      padding: 1rem;
       h3{
         font-size: 1.5rem;
         align-items: center;

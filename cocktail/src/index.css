@@ -20,6 +20,17 @@ code {
     monospace;
 }
 
+h1 {
+  font-size: 5rem;
+  text-shadow: 4px 4px 8px black;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.5rem;
+  text-shadow: 4px 4px 6px black;
+}
+
 h4{
   font-size: 1rem;
   color: rgb(56, 56, 56);
@@ -46,3 +57,22 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
+
+.spacing>*+* {
+  margin-top: 2rem;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 20em 0;
+  background-image: url(../../img/bartender-1.jpeg);
+  background-size: 135%;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  opacity: .95;
+  
+}
+

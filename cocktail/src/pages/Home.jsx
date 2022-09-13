@@ -1,5 +1,6 @@
 import Vodka from "../components/Vodka";
 import Popular from "../components/Popular";
+import NonAlcohol from "../components/NonAlcohol";
 import {motion} from 'framer-motion';
 
 
@@ -11,10 +12,11 @@ function Home() {
     animate={{opacity: 1}}
     initial={{opacity: 0}}
     exit={{opacity: 0}}
-    transition={{duration: 0.5}}
+    transition={{duration: 0.75}}
     >
         <Popular />
         <Vodka />
+        <NonAlcohol />
     </motion.div>
   )
 }

@@ -24,7 +24,6 @@ function Vodka() {
           fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${string}`)
           .then(res=>res.json())
           .then(data=>{
-            console.log(data.drinks);
             setVodka(data.drinks);
           })
       }
@@ -36,7 +35,7 @@ function Vodka() {
     <div> 
         <Wrapper>
         
-      <h3>Vodka</h3>
+      <h3>Made with Vodka</h3>
       <Splide options={{
           perPage: 5,
           arrows: true,
@@ -46,7 +45,7 @@ function Vodka() {
           perMove: 1,
           height: 230,
           autoplay: true,
-          interval: 5000,
+          interval: 4000,
           type: 'loop',
       }}> 
       
@@ -72,6 +71,7 @@ function Vodka() {
 
 const Wrapper = styled.div`
       margin: 0% 15%;
+      padding: 1rem;
       h3{
         font-size: 1.5rem;
         display: flex;
@@ -86,7 +86,7 @@ const Wrapper = styled.div`
       border-radius: 1.5rem;
       overflow: hidden;
       position: relative;
-      box-shadow: 10px 10px lightblue;
+      box-shadow: 10px 10px pink;
       border-radius: 5% 20%;
       &:hover {
         filter: brightness(1.2);
