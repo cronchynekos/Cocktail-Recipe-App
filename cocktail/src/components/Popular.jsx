@@ -56,7 +56,7 @@ function Popular() {
                     drag: "free",
                     gap: "4rem",
                     perMove: 1,
-                    height: 230,
+                    height: 300,
                     autoplay: true,
                     interval: 4000,
                     type: 'loop',

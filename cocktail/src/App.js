@@ -35,16 +35,16 @@ const Logo = styled(Link)`
 `;
 
 const Nav = styled.div`
-  padding: 1rem 3rem;
+  padding: .8rem 4rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   border-radius: 0% 0% 2% 2%;
-  background: linear-gradient(35deg, #808080, #dadada);
+  background: #808080;
   svg{
     font-size: 1rem;
   }
 `;
-
+//linear-gradient(35deg, #808080, #dadada)
 
 export default App;
