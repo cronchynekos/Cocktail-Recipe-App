@@ -37,16 +37,32 @@ function Vodka() {
         
       <h3>Made with Vodka</h3>
       <Splide options={{
-          perPage: 5,
+          perPage: 4,
           arrows: true,
           pagination: false,
           drag: "free",
           gap: "4rem",
           perMove: 1,
-          height: 230,
           autoplay: true,
           interval: 4000,
           type: 'loop',
+          height: 330,
+          breakpoints: {
+            1400: {
+              height: 220,
+            },
+            1024: {
+              perPage: 3,
+            },
+            767: {
+              perPage: 2,
+          
+            },
+            640: {
+              perPage: 1,
+        
+            },
+          },
       }}> 
       
       {vodkas.map((drink) => {
@@ -71,7 +87,6 @@ function Vodka() {
 
 const Wrapper = styled.div`
       margin: 0% 15%;
-      padding: 1rem;
       h3{
         font-size: 1.5rem;
         display: flex;
@@ -82,7 +97,6 @@ const Wrapper = styled.div`
 
     const Card = styled.div`
     
-      min-height: 0rem;
       border-radius: 1.5rem;
       overflow: hidden;
       position: relative;

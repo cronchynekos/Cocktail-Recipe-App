@@ -15,7 +15,6 @@ function App() {
         <Nav>
           <BiDrink />
           <Logo to={"/"}>Cocktails</Logo>
-          <BiDrink />
           <Search /> 
         </Nav>
         <Category />

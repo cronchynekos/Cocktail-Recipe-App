@@ -12,7 +12,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 code {
@@ -24,6 +23,7 @@ h1 {
   font-size: 5rem;
   text-shadow: 4px 4px 8px black;
   text-transform: uppercase;
+  
 }
 
 p {
@@ -76,3 +76,8 @@ body::-webkit-scrollbar-thumb {
   
 }
 
+.backgroundShape {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(35deg, LightGray, LightSteelBlue);
+}
