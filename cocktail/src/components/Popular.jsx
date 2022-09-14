@@ -46,32 +46,26 @@ function Popular() {
     return (
         <div>
             <Wrapper>
-                <h3>Popular Picks</h3>
+                <h3>Trending</h3>
                 <Splide options={{
-                    perPage  : 4,
+                    perPage  : 3,
                     arrows   : true,
                     pagination: false,
                     drag: "free",
-                    gap: "3em",
+                    gap: "2rem",
                     autoplay: true,
                     perMove: 1,
                     interval: 4000,
                     type: 'loop',
-                    height: 330,
                     breakpoints: {
-                      1400: {
-                        height: 220,
-                      },
                       1024: {
                         perPage: 3,
                       },
                       767: {
                         perPage: 2,
-                    
                       },
                       640: {
                         perPage: 1,
-                  
                       },
                     },
                 }}> 
@@ -96,10 +90,10 @@ function Popular() {
     }
 
     const Wrapper = styled.div`
-      margin: 0% 15%;
+      margin: 0% 10%;
       
       h3{
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         align-items: center;
         display: flex;
         justify-content: center;
@@ -109,21 +103,17 @@ function Popular() {
 
     const Card = styled.div`
       
-
-      box-shadow: 10px 10px DarkSeaGreen;
-      
-      border-radius: 5% 20%;
+      border-radius: 5% 5%;
       position: relative;
       overflow: visible;
       &:hover {
         filter: brightness(1.2);
       }
       img{
-        
         postion: absolute;
-        border-radius: 5% 20%;
+        border-radius: 5% 5%;
         width: 100%;
-        height: 100%;
+        height: 20rem;
         object-fit: cover;
         overflow: visible;
       }
@@ -146,7 +136,7 @@ function Popular() {
     `;
 
     const Gradient = styled.div`
-      border-radius: 5% 20%;
+      border-radius: 5% 5%;
       z-index: 3;
       position: absolute;
       width: 100%;

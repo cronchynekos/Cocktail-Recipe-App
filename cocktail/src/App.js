@@ -5,18 +5,19 @@ import Search from "./components/Search";
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
 import {BiDrink} from 'react-icons/bi';
+import LandingPage from "./components/LandingPage";
 
 function App() {
   return (
     <div >
       <div className="App" >
         <BrowserRouter>
-
         <Nav>
           <BiDrink />
-          <Logo to={"/"}>Cocktails</Logo>
+          <Logo to={"/"}>CocktailHouse</Logo>
           <Search /> 
         </Nav>
+        <LandingPage />
         <Category />
           <Pages />
         </BrowserRouter>
@@ -38,10 +39,13 @@ const Nav = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 0% 0% 2% 2%;
-  background: #808080;
+  background: azure;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  // outline: 1px solid black;
   svg{
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 `;
 //linear-gradient(35deg, #808080, #dadada)

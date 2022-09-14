@@ -21,13 +21,13 @@ code {
 
 h1 {
   font-size: 5rem;
-  text-shadow: 4px 4px 8px black;
-  text-transform: uppercase;
-  
-}
-
-p{
-
+  /* text-shadow: 4px 4px 8px black; */
+  /* text-transform: uppercase; */
+  color: black;
+  font-weight: 500;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 4px;
+  line-height: 4rem;
 }
 
 h4{
@@ -54,7 +54,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: DarkGrey;
 }
 
 .spacing>*+* {
@@ -63,26 +63,32 @@ body::-webkit-scrollbar-thumb {
 
 .hero {
   color: white;
-  text-align: center;
-  padding: 20em 0;
-  background-image: url(../../img/bartender-1.jpeg);
-  background-size: 135%;
+  text-align: left;
+  padding: 10em 0;
+  margin-left: 15rem;
+  margin-right: 10rem;
+  background-image: url(../../img/landingpage2.png);
+  background-size: 38%;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center center;
+  background-position: 80% 25%;
   opacity: .95;
+  line-height: 3.5rem;
+  font-weight: 500;
 }
 
 .hero p {
-  font-size: 1.5rem;
-  text-shadow: 4px 4px 6px black;
+  font-size: 1.25rem;
+  /* text-shadow: 4px 4px 6px black; */
+  color: black;
+  line-height: .65rem;
 }
 
 .backgroundShape {
   height: 100%;
   width: 100%;
-  background: linear-gradient(35deg, LightGray, LightSteelBlue);
+  background: white;
 }
 
 footer{
@@ -129,3 +135,7 @@ footer{
   color: white;
 }
 
+.landingPageImg {
+  width: 5rem;
+
+}

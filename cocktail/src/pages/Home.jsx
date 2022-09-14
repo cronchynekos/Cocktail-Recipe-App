@@ -26,7 +26,7 @@ function Home() {
 }
 
 const Rectangle = styled.div`
-  // background: linear-gradient(35deg, white, DarkSeaGreen);
+  // background: white;
 `
 
 

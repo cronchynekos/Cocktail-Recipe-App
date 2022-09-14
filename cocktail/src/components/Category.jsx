@@ -44,17 +44,17 @@ const List = styled.div`
 `;
 
 const Slink = styled(NavLink)`
-box-shadow: 6px 6px lightblue;
+    box-shadow: 6px 6px lightblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin-right: 1.5rem;
+    margin-right: 2.5rem;
     text-decoration: none;
     background: linear-gradient(35deg, #494949, #313131);
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
     cursor: pointer;
     transform: scale(0.8);
     &:hover {
