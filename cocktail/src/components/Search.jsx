@@ -24,14 +24,17 @@ function Search() {
             type="text" 
             value={input}/>
         </div>
+            
     </FormStyle>
+    
   )
 }
 
 
+
 const FormStyle = styled.form`
-    margin-left: auto;
-    margin-right: 0;
+    margin-left: 5%;
+    margin-right: auto;
     div{
         position: relative;
         width: 100%;

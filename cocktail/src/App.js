@@ -1,30 +1,74 @@
 import Pages from "./pages/Pages";
 import Category from "./components/Category";
+import LandingPage from "./components/LandingPage";
+import Footer from "./components/Footer";
 import {BrowserRouter} from 'react-router-dom'
 import Search from "./components/Search";
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
 import {BiDrink} from 'react-icons/bi';
-import LandingPage from "./components/LandingPage";
+import {motion} from 'framer-motion';
+import {FaGithub, FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
 
 function App() {
   return (
     <div >
       <div className="App" >
-        <BrowserRouter>
-        <Nav>
-          <BiDrink />
-          <Logo to={"/"}>CocktailHouse</Logo>
-          <Search /> 
-        </Nav>
-        <LandingPage />
-        <Category />
-          <Pages />
-        </BrowserRouter>
+      <motion.div
+      animate={{opacity: 1}}
+      initial={{opacity: 0}}
+      exit={{opacity: 0}}
+      transition={{ease: "easeOut", duration: 0.75}}
+      >
+          <BrowserRouter>
+          <Nav>
+            <BiDrink />
+            <Logo to={"/"}>CocktailHouse</Logo>
+            <Search /> 
+            <Button>
+              <FaGithub />
+            </Button>
+            <Button>
+                <FaInstagram />
+            </Button>
+            <Button>
+                <FaLinkedin />
+            </Button>
+            <Button>
+                <FaTwitter />
+            </Button>
+          </Nav>
+          <LandingPage />
+          <motion.div
+          animate={{scaleX: 1}}
+          initial={{scaleX: 0.85}}
+          transition={{ease: "easeOut", duration: 1.2}}
+          >
+            <Category />
+          </motion.div>
+            <Pages />
+            <Footer />
+          </BrowserRouter>
+        </motion.div>
       </div>
     </div>
   );
 }
+
+const Button = styled.button`
+    color: black;
+    background: none;
+    border: none;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    margin-right: 0;
+    &:hover {
+    filter: brightness(1.2);
+    }
+    svg{
+        font-size: 1.4rem;
+    }
+`
 
 const Logo = styled(Link)`
   transform: translate(0px);

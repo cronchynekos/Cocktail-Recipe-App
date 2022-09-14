@@ -20,11 +20,11 @@ function Popular() {
             setCocktail(JSON.parse(check));
         }else{
             Promise.all([
-                fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}`).then(value => value.json()),
-                fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}`).then(value => value.json()),
-                fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}`).then(value => value.json()),
-                fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}`).then(value => value.json()),
-                fetch(`https://thecocktaildb.com/api/json/v1/1/random.php?apiKey=${process.env.REACT_APP_API_KEY}`).then(value => value.json())
+                fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=13621`).then(value => value.json()),
+                fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=178328`).then(value => value.json()),
+                fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=11224`).then(value => value.json()),
+                fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=11417`).then(value => value.json()),
+                fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=17214`).then(value => value.json())
             ])
                 .then((value) =>{
                     var objectCopy = JSON.parse(JSON.stringify(value[0]));
