@@ -35,6 +35,7 @@ function Search() {
 const FormStyle = styled.form`
     margin-left: 5%;
     margin-right: auto;
+    
     div{
         position: relative;
         width: 100%;
@@ -44,7 +45,7 @@ const FormStyle = styled.form`
         border: none;
         background: white;
         font-size: 1.2rem;
-        border-radius: 0.5rem;
+        border-radius: 0.2rem;
         color: black;
         padding: .50rem 3rem;
         outline: none;

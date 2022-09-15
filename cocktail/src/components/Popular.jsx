@@ -90,20 +90,21 @@ function Popular() {
     }
 
     const Wrapper = styled.div`
-      margin: 0% 10%;
-      
+      background: none;
+      margin: 3% 10%;
+      padding: 1rem;
+      border-top-style: solid;
       h3{
         font-size: 1.75rem;
         align-items: center;
         display: flex;
         justify-content: center;
       }
-      overflow: hidden;
     `
 
     const Card = styled.div`
       
-      border-radius: 5% 5%;
+      border-radius: 2%;
       position: relative;
       overflow: visible;
       &:hover {
@@ -111,7 +112,7 @@ function Popular() {
       }
       img{
         postion: absolute;
-        border-radius: 5% 5%;
+        border-radius: 2%;
         width: 100%;
         height: 20rem;
         object-fit: cover;
@@ -136,7 +137,7 @@ function Popular() {
     `;
 
     const Gradient = styled.div`
-      border-radius: 5% 5%;
+      border-radius: 2%;
       z-index: 3;
       position: absolute;
       width: 100%;

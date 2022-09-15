@@ -23,7 +23,7 @@ function Footer() {
                         <FaTwitter />
                     </Button>
                 </ul>
-                <p>Copyright 2022 Nathanael Kim</p>
+                <p>© Copyright 2022 Nathanael Kim</p>
             </div>
         </footer>
     </div>

@@ -41,6 +41,7 @@ const List = styled.div`
     display: flex;
     justify-content: center;
     margin: 1rem 1rem;
+    background: azure;
 `;
 
 const Slink = styled(NavLink)`
@@ -62,7 +63,7 @@ const Slink = styled(NavLink)`
       }
     h4 {
         color: white;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     svg{
         color: white;

@@ -80,6 +80,7 @@ const Logo = styled(Link)`
 
 const Nav = styled.div`
   padding: .8rem 4rem;
+  //border-bottom-style: solid;
   display: flex;
   justify-content: flex-start;
   align-items: center;

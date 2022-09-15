@@ -87,7 +87,7 @@ function Mocktails() {
 
 const Wrapper = styled.div`
       margin: 0% 10%;
-      padding-bottom: 2rem;
+      padding: 1rem;
       h3{
         font-size: 1.5rem;
         display: flex;
@@ -97,24 +97,23 @@ const Wrapper = styled.div`
     `
 
     const Card = styled.div`
-    
       min-height: 0rem;
       border-radius: 1.5rem;
       overflow: hidden;
       position: relative;
-      border-radius: 5% 5%;
+      border-radius: 2%;
       &:hover {
         filter: brightness(1.2);
       }
       img{
         transform: translate(0px);
-        border-radius: 1.5rem;
         postion: absolute;
-        border-radius: 5% 5%;
+        border-radius: 2%;
         left: 50%;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        height: 15rem;
       }
       p{
         position: absolute;
@@ -137,11 +136,10 @@ const Wrapper = styled.div`
     const Gradient = styled.div`
       z-index: 3;
       position: absolute;
-      border-radius: 5% 5%;
+      border-radius: 2%;
       width: 100%;
       height: 100%;
       background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2));
-      border-radius: 1.5rem;
     `
 
     
