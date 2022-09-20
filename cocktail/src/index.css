@@ -61,33 +61,100 @@ body::-webkit-scrollbar-thumb {
   margin-top: 2rem;
 }
 
-.hero {
-  color: white;
-  text-align: left;
-  padding: 10em 0;
-  margin-right: 10rem;
-  background-image: url(../../img/landingpage2.png);
-  background-size: 38%;
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 80% 25%;
-  opacity: .95;
-  line-height: 3.5rem;
-  font-weight: 500;
+@media only screen and (max-width: 600px) {
+  .hero {
+    color: white;
+    text-align: left;
+    padding: 10em 0em;
+    margin-right: 0rem;
+    background-image: url(../../img/landingpage2.png);
+    background-size: 60%;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 10%;
+    opacity: .95;
+    line-height: 3.5rem;
+    font-weight: 500;
+  }
+
+  .hero h1{
+    margin-left: 2rem;
+    margin-top: 10rem;
+    line-height: 6rem;
+    text-shadow: 3px 3px white;
+  }
+  
+  .hero p {
+    font-size: 2rem;
+    color: black;
+    line-height: 2rem;
+    margin-left: 2rem;
+  }
 }
 
-.hero h1{
-  margin-left: 15rem;
+@media only screen and (min-width: 600px) {
+  .hero {
+    color: white;
+    text-align: left;
+    padding: 10em 0;
+    margin-right: 3rem;
+    background-image: url(../../img/landingpage2.png);
+    background-size: 75%;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 10%;
+    opacity: .95;
+    line-height: 3.5rem;
+    font-weight: 500;
+  }
+
+  .hero h1{
+    margin-left: 5rem;
+    margin-top: 10rem;
+    line-height: 6rem;
+    text-shadow: 3px 3px white;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    color: black;
+    line-height: 2rem;
+    margin-left: 5rem;
+  }
+}
+  
+@media only screen and (min-width: 1200px) {
+  .hero {
+    color: white;
+    text-align: left;
+    padding: 10em 0;
+    margin-right: 10rem;
+    background-image: url(../../img/landingpage2.png);
+    background-size: 42%;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 80% 25%;
+    opacity: .95;
+    line-height: 3.5rem;
+    font-weight: 500;
+  }
+
+  .hero h1{
+    margin-left: 15rem;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    /* text-shadow: 4px 4px 6px black; */
+    color: black;
+    line-height: 2rem;
+    margin-left: 15rem;
+  }
 }
 
-.hero p {
-  font-size: 1.25rem;
-  /* text-shadow: 4px 4px 6px black; */
-  color: black;
-  line-height: .65rem;
-  margin-left: 15rem;
-}
 
 .backgroundShape {
   height: 100%;
