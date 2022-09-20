@@ -46,7 +46,7 @@ a{
 }
 
 body::-webkit-scrollbar {
-  width: 0.25rem;
+  width: 0.4rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -65,14 +65,14 @@ body::-webkit-scrollbar-thumb {
   .hero {
     color: white;
     text-align: left;
-    padding: 10em 0em;
+    padding: 5em 0em;
     margin-right: 0rem;
     background-image: url(../../img/landingpage2.png);
-    background-size: 60%;
+    background-size: 65%;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 50% 10%;
+    background-position: 25% 10%;
     opacity: .95;
     line-height: 3.5rem;
     font-weight: 500;
@@ -81,15 +81,17 @@ body::-webkit-scrollbar-thumb {
   .hero h1{
     margin-left: 2rem;
     margin-top: 10rem;
-    line-height: 6rem;
+    line-height: 4rem;
     text-shadow: 3px 3px white;
+    font-size: 3rem;
   }
   
   .hero p {
-    font-size: 2rem;
+    font-size: 1.25rem;
     color: black;
-    line-height: 2rem;
+    line-height: 1.75rem;
     margin-left: 2rem;
+    margin-bottom: -3rem;
   }
 }
 
@@ -129,7 +131,7 @@ body::-webkit-scrollbar-thumb {
   .hero {
     color: white;
     text-align: left;
-    padding: 10em 0;
+    padding: 5em 0;
     margin-right: 10rem;
     background-image: url(../../img/landingpage2.png);
     background-size: 42%;
@@ -143,15 +145,17 @@ body::-webkit-scrollbar-thumb {
   }
 
   .hero h1{
-    margin-left: 15rem;
+    margin-left: 13rem;
+    font-size: 6.25rem;
+    line-height: 7rem;
   }
   
   .hero p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     /* text-shadow: 4px 4px 6px black; */
     color: black;
     line-height: 2rem;
-    margin-left: 15rem;
+    margin-left: 13rem;
   }
 }
 
