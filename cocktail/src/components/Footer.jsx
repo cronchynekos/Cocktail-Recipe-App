@@ -8,7 +8,7 @@ function Footer() {
         <footer>
             <div class="footer-content">
                 <h3>Cocktail  House</h3>
-                <p>Make new and tasty drinks with confidence</p>
+                <p>Make new and tasty drinks with confidence!</p>
                 <ul>
                     <Button>
                         <FaGithub />
@@ -45,21 +45,5 @@ const Button = styled.button`
         margin-top: 1.5rem;
     }
 `
-
-// .socials{
-//     list-style: none;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//   }
-  
-//   .socials li{
-//     margin: 0 10px;
-//   }
-  
-//   .socials a{
-//     text-decoration: none;
-//     color: white;
-//   }
 
 export default Footer

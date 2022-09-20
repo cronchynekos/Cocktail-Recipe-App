@@ -125,22 +125,6 @@ footer{
   margin-bottom: 0rem;
 }
 
-.socials{
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.socials li{
-  margin: 0 10px;
-}
-
-.socials a{
-  text-decoration: none;
-  color: white;
-}
-
 .landingPageImg {
   width: 5rem;
 
