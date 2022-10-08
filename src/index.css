@@ -67,7 +67,7 @@ body::-webkit-scrollbar-thumb {
     text-align: left;
     padding: 5em 0em;
     margin-right: 0rem;
-    background-image: url(../../img/landingpage2.png);
+    background-image: url(../img/landingpage2.png);
     background-size: 65%;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
@@ -101,7 +101,7 @@ body::-webkit-scrollbar-thumb {
     text-align: left;
     padding: 10em 0;
     margin-right: 3rem;
-    background-image: url(../../img/landingpage2.png);
+    background-image: url(../img/landingpage2.png);
     background-size: 75%;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
@@ -133,7 +133,7 @@ body::-webkit-scrollbar-thumb {
     text-align: left;
     padding: 5em 0;
     margin-right: 10rem;
-    background-image: url(../../img/landingpage2.png);
+    background-image: url(../img/landingpage2.png);
     background-size: 42%;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
