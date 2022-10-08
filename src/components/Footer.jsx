@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaGithub, FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
+import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
 import styled from "styled-components";
 
 function Footer() {
@@ -10,18 +10,21 @@ function Footer() {
                 <h3>Cocktail  House</h3>
                 <p>Make new and tasty drinks with confidence!</p>
                 <ul>
-                    <Button>
-                        <FaGithub />
-                    </Button>
-                    <Button>
-                        <FaInstagram />
-                    </Button>
-                    <Button>
-                        <FaLinkedin />
-                    </Button>
-                    <Button>
-                        <FaTwitter />
-                    </Button>
+            <a href="https://github.com/cronchynekos" target="_blank" rel="noreferrer">
+                <Button>
+                <FaGithub/>
+                </Button>
+            </a>
+            <a href="https://www.instagram.com/nathankimy/?hl=en" target="_blank" rel="noreferrer">
+                <Button>
+                    <FaInstagram />
+                </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/nathanael-kim-800448170/" target="_blank" rel="noreferrer">
+                <Button>
+                    <FaLinkedin />
+                </Button>
+            </a>
                 </ul>
                 <p>© Copyright 2022 Nathanael Kim</p>
             </div>
