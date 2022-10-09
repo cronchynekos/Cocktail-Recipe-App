@@ -12,7 +12,7 @@ function Search() {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        navigate("/searched/" + input);
+        navigate("/Cocktail-Recipe-App/searched/" + input);
     };
 
   return (

@@ -9,27 +9,27 @@ import {NavLink} from "react-router-dom";
 function Category() {
   return (
     <List>
-        <Slink to={'/drinks/Gin'}>
+        <Slink to={'Cocktail-Recipe-App//drinks/Gin'}>
             <MdWaterDrop />
             <h4>Gin</h4>
         </Slink>
-        <Slink to={'/drinks/Vodka'}>
+        <Slink to={'Cocktail-Recipe-App//drinks/Vodka'}>
             <GiGlassShot />
             <h4>Vodka</h4>
         </Slink>
-        <Slink to={'/drinks/Tequila'}>
+        <Slink to={'Cocktail-Recipe-App//drinks/Tequila'}>
             <GiBeerBottle />
             <h4>Tequila</h4>
         </Slink>
-        <Slink to={'/drinks/Rum'}>
+        <Slink to={'Cocktail-Recipe-App//drinks/Rum'}>
             <MdOutlineWaterDrop />
             <h4>Rum</h4>
         </Slink>
-        <Slink to={'/drinks/Brandy'}>
+        <Slink to={'Cocktail-Recipe-App//drinks/Brandy'}>
             <BiBeer />
             <h4>Brandy</h4>
         </Slink>
-        <Slink to={'/drinks/Whiskey'}>
+        <Slink to={'Cocktail-Recipe-App//drinks/Whiskey'}>
             <IoMdWine />
             <h4>Whiskey</h4>
         </Slink>
