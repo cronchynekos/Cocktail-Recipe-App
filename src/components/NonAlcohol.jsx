@@ -69,7 +69,7 @@ function Mocktails() {
           return(
               <SplideSlide key ={drink.idDrink}>
                 <Card>
-                  <Link to={'/recipe/' + drink.idDrink}>
+                  <Link to={'/Cocktail-Recipe-App/recipe/' + drink.idDrink}>
                   <Gradient/>
                     <p>{drink.strDrink}</p>
                     <img src={drink.strDrinkThumb} alt={drink.strDrink} />

@@ -29,7 +29,7 @@ useEffect(() => {
         {drinks.map((item) => {
             return(
                 <Card key={item.idDrink}>
-                    <Link to={'/recipe/' + item.idDrink}>
+                    <Link to={'/Cocktail-Recipe-App/recipe/' + item.idDrink}>
                     <img src={item.strDrinkThumb} alt="" />
                     <h4>{item.strDrink}</h4>
                     </Link>
