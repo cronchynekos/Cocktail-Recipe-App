@@ -3,7 +3,6 @@ import Category from "./components/Category";
 import LandingPage from "./components/LandingPage";
 import Footer from "./components/Footer";
 import {BrowserRouter} from 'react-router-dom'
-import Search from "./components/Search";
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
 import {BiDrink} from 'react-icons/bi';
@@ -24,7 +23,7 @@ function App() {
           <Nav>
             <BiDrink />
             <Logo to={"/Cocktail-Recipe-App/"}>CocktailHouse</Logo>
-            <Search /> 
+            
             <a href="https://github.com/cronchynekos" target="_blank" rel="noreferrer">
               <Button>
                 <FaGithub/>
@@ -40,15 +39,15 @@ function App() {
                   <FaLinkedin />
               </Button>
             </a>
-
           </Nav>
+
+          <Category />
           <LandingPage />
           <motion.div
           animate={{scaleX: 1}}
           initial={{scaleX: 0.85}}
           transition={{ease: "easeOut", duration: 1.2}}
           >
-            <Category />
           </motion.div>
             <Pages />
             <Footer />
@@ -88,7 +87,7 @@ const Nav = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: azure;
+  background: white;
   position: sticky;
   top: 0;
   z-index: 10;

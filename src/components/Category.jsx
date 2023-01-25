@@ -1,69 +1,76 @@
-import {MdOutlineWaterDrop, MdWaterDrop} from "react-icons/md";
-import {GiBeerBottle, GiGlassShot} from "react-icons/gi";
-import {BiBeer} from "react-icons/bi";
-import {IoMdWine} from "react-icons/io";
+// import {MdOutlineWaterDrop, MdWaterDrop} from "react-icons/md";
+// import {GiBeerBottle, GiGlassShot} from "react-icons/gi";
+// import {BiBeer} from "react-icons/bi";
+// import {IoMdWine} from "react-icons/io";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
+import Search from "./Search";
+
 
 
 function Category() {
   return (
     <List>
         <Slink to={'Cocktail-Recipe-App/drinks/Gin'}>
-            <MdWaterDrop />
+            {/* <MdWaterDrop /> */}
             <h4>Gin</h4>
         </Slink>
         <Slink to={'Cocktail-Recipe-App/drinks/Vodka'}>
-            <GiGlassShot />
+            {/* <GiGlassShot /> */}
             <h4>Vodka</h4>
         </Slink>
         <Slink to={'Cocktail-Recipe-App/drinks/Tequila'}>
-            <GiBeerBottle />
+            {/* <GiBeerBottle /> */}
             <h4>Tequila</h4>
         </Slink>
         <Slink to={'Cocktail-Recipe-App/drinks/Rum'}>
-            <MdOutlineWaterDrop />
+            {/* <MdOutlineWaterDrop /> */}
             <h4>Rum</h4>
         </Slink>
         <Slink to={'Cocktail-Recipe-App/drinks/Brandy'}>
-            <BiBeer />
+            {/* <BiBeer /> */}
             <h4>Brandy</h4>
         </Slink>
         <Slink to={'Cocktail-Recipe-App/drinks/Whiskey'}>
-            <IoMdWine />
+            {/* <IoMdWine /> */}
             <h4>Whiskey</h4>
         </Slink>
+        <Search />
     </List>
   )
 }
 
 const List = styled.div`
     display: flex;
-    justify-content: center;
-    margin: 1rem 1rem;
-    background: azure;
+    justify-content: start;
+    // margin-left: 10rem;
+    // margin-right: 10rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    background: black;
 `;
 
 const Slink = styled(NavLink)`
-    box-shadow: 6px 6px lightblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
     margin-right: 2.5rem;
     text-decoration: none;
-    background: linear-gradient(35deg, #494949, #313131);
     width: 7rem;
-    height: 7rem;
+    height: 2rem;
     cursor: pointer;
     transform: scale(0.8);
+
     &:hover {
         filter: brightness(1.5);
       }
     h4 {
         color: white;
-        font-size: 1rem;
+        font-size: 2rem;
+        font-family: "Roboto Condensed";
+        font-weight: 300;
     }
     svg{
         color: white;
@@ -71,13 +78,6 @@ const Slink = styled(NavLink)`
     }
     &.active{
         background: linear-gradient(to right, #f27121, #e94057);
-        
-        svg{
-            color: white;
-        }
-        h4{
-            color: white;
-        }
     }
 `;
 
