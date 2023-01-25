@@ -28,6 +28,7 @@ h1 {
   font-family: 'Anton', sans-serif;
   letter-spacing: 4px;
   line-height: 4rem;
+  z-index: 5;
 }
 
 h4{
@@ -67,7 +68,7 @@ body::-webkit-scrollbar-thumb {
     text-align: left;
     padding: 5em 0em;
     margin-right: 0rem;
-    background-image: url(../img/landingpage2.png);
+    /* background-image: url(../img/landingpage2.png); */
     background-size: 65%;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
@@ -101,7 +102,7 @@ body::-webkit-scrollbar-thumb {
     text-align: left;
     padding: 10em 0;
     margin-right: 3rem;
-    background-image: url(../img/landingpage2.png);
+    /* background-image: url(../img/landingpage2.png); */
     background-size: 75%;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
@@ -133,7 +134,6 @@ body::-webkit-scrollbar-thumb {
     text-align: left;
     padding: 5em 0;
     margin-right: 10rem;
-    background-image: url(../img/landingpage2.png);
     background-size: 42%;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
@@ -146,8 +146,9 @@ body::-webkit-scrollbar-thumb {
 
   .hero h1{
     margin-left: 13rem;
-    font-size: 6.25rem;
+    font-size: 5.25rem;
     line-height: 7rem;
+    z-index: 5;
   }
   
   .hero p {

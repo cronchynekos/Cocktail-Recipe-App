@@ -1,5 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion';
+import "./base.css"
 
 function LandingPage() {
   return (
@@ -15,6 +16,7 @@ function LandingPage() {
                 <p>Whether you are experienced or are just starting out, 
                 <br/>have confidence making the latest and tastiest drinks! 
                 <br/>You might even find your new favorite cocktail</p>
+                <img src="./img/landingpage2.png" alt="landing" className='landingimage'></img>
             </div>
         </div>
     </motion.div>

@@ -35,13 +35,14 @@ function Vodka() {
     <div> 
         <Wrapper>
         
-      <h3>Made with Vodka</h3>
+      <h3>Vodka Cocktails</h3>
+      <p>A collection of the most popular vodka drinks.</p>
       <Splide options={{
           perPage: 4,
           arrows: true,
           pagination: false,
           drag: "free",
-          gap: "4rem",
+          gap: "2rem",
           perMove: 1,
           autoplay: true,
           interval: 4000,
@@ -86,16 +87,23 @@ function Vodka() {
 }
 
 const Wrapper = styled.div`
-      background: azure;
+      background: white;
       margin: 0% 10%;
       padding: 1rem;
-      border-bottom-style: solid;
-      border-top-style: solid;
+      height: 100%;
       h3{
         font-size: 1.5rem;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
+      }
+      p{
+        font-family: "Abel", sans-serif;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: grey;
       }
     `
 
@@ -104,46 +112,50 @@ const Wrapper = styled.div`
       border-radius: 1.5rem;
       overflow: hidden;
       position: relative;
-      border-radius: 2%;
+      border-radius: 0%;
+      height: 100%;
       &:hover {
-        filter: brightness(1.2);
+        filter: brightness(1.1);
+        transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
       }
       img{
         transform: translate(0px);
         border-radius: 1.5rem;
         postion: absolute;
-        border-radius: 2%;
+        border-radius: 0%;
         left: 50%;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        height: 15rem;
+        height: 17.5rem;
       }
       p{
         position: absolute;
         z-index: 10;
         left: 50%;
-        bottom: 0%;
+        bottom: -10%;
         transform: translate(-50%, 20%);
-        color: white;
+        color: #af181a;
         width: 100%;
         text-align: center;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 1rem;
         height: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: "Abel", sans-serif;
+        letter-spacing: 1px;
       }
     `;
 
     const Gradient = styled.div`
       z-index: 3;
       position: absolute;
-      border-radius: 2%;
+      border-radius: 0%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2));
+      // background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2));
     `
 
     

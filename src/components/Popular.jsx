@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Splide, SplideSlide} from '@splidejs/react-splide';
 import "@splidejs/react-splide/css";
 import {Link} from "react-router-dom";
+import "./base.css"
 
 function Popular() {
     const [cocktails, setCocktail] = useState([]);
@@ -46,7 +47,8 @@ function Popular() {
     return (
         <div>
             <Wrapper>
-                <h3>Trending</h3>
+                <h3>Trending Drinks</h3>
+                <p>Some of our most popular drink recipes, these recipes are easy and impressive.</p>
                 <Splide options={{
                     perPage  : 3,
                     arrows   : true,
@@ -93,12 +95,19 @@ function Popular() {
       background: none;
       margin: 3% 10%;
       padding: 1rem;
-      border-top-style: solid;
       h3{
         font-size: 1.75rem;
         align-items: center;
         display: flex;
-        justify-content: center;
+        justify-content: start;
+      }
+      p{
+        font-family: "Abel", sans-serif;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: grey;
       }
     `
 
@@ -109,40 +118,45 @@ function Popular() {
       overflow: visible;
       &:hover {
         filter: brightness(1.2);
+        transition: all 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
       }
+      height: 100%;
       img{
         postion: absolute;
         border-radius: 2%;
         width: 100%;
-        height: 20rem;
+        height: 80%;
         object-fit: cover;
         overflow: visible;
+        
       }
       p{
         position: absolute;
         z-index: 10;
         left: 50%;
-        bottom: 0%;
+        bottom: -18%;
         transform: translate(-50%, 0%);
-        color: white;
+        color: #af181a;
         width: 100%;
         text-align: center;
-        font-weight: 600;
-        font-size: 1.2rem;
+        font-weight: 300;
+        font-size: 1.4rem;
         height: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: "Abel", sans-serif;
+        letter-spacing: 1px;
       }
     `;
 
     const Gradient = styled.div`
-      border-radius: 2%;
+      border-radius: 0%;
       z-index: 3;
       position: absolute;
       width: 100%;
-      height: 100%;
-      background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+      height: 90%;
+      background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
     `
 
 export default Popular;
