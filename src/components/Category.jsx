@@ -5,35 +5,29 @@
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 import Search from "./Search";
-
+import "./base.css"
 
 
 function Category() {
   return (
     <List>
         <Slink to={'Cocktail-Recipe-App/drinks/Gin'}>
-            {/* <MdWaterDrop /> */}
-            <h4>Gin</h4>
+            <h4 className="category">Gin</h4>
         </Slink>
         <Slink to={'Cocktail-Recipe-App/drinks/Vodka'}>
-            {/* <GiGlassShot /> */}
-            <h4>Vodka</h4>
+            <h4 className="category">Vodka</h4>
         </Slink>
         <Slink to={'Cocktail-Recipe-App/drinks/Tequila'}>
-            {/* <GiBeerBottle /> */}
-            <h4>Tequila</h4>
+            <h4 className="category">Tequila</h4>
         </Slink>
         <Slink to={'Cocktail-Recipe-App/drinks/Rum'}>
-            {/* <MdOutlineWaterDrop /> */}
-            <h4>Rum</h4>
+            <h4 className="category">Rum</h4>
         </Slink>
         <Slink to={'Cocktail-Recipe-App/drinks/Brandy'}>
-            {/* <BiBeer /> */}
-            <h4>Brandy</h4>
+            <h4 className="category">Brandy</h4>
         </Slink>
         <Slink to={'Cocktail-Recipe-App/drinks/Whiskey'}>
-            {/* <IoMdWine /> */}
-            <h4>Whiskey</h4>
+            <h4 className="category">Whiskey</h4>
         </Slink>
         <Search />
     </List>
@@ -43,8 +37,6 @@ function Category() {
 const List = styled.div`
     display: flex;
     justify-content: start;
-    // margin-left: 10rem;
-    // margin-right: 10rem;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 60px;

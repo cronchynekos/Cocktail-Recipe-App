@@ -88,8 +88,12 @@ function Mocktails() {
 const Wrapper = styled.div`
       padding: 1rem;
       height: 100%;
-      margin-left: 15rem;
-      margin-right: 15rem;
+      @media (max-width: 600px){
+        margin-left: 0rem;
+        margin-right: 0rem;
+      }
+      margin-left: 25rem;
+      margin-right: 25rem;
       h3{
         font-size: 1.5rem;
         display: flex;
@@ -116,7 +120,7 @@ const Wrapper = styled.div`
       img{
         postion: absolute;
         left: 50%;
-        width: 100%;
+        width: 95%;
         height: 100%;
         object-fit: cover;
         height: 17.5rem;
@@ -128,6 +132,9 @@ const Wrapper = styled.div`
         bottom: -10%;
         transform: translate(-50%, 20%);
         color: #af181a;
+        @media (max-width: 600px){
+          color: white;
+        }
         width: 100%;
         text-align: center;
         font-weight: 400;

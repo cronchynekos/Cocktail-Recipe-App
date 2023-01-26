@@ -1,59 +1,136 @@
-.landingimage{
-    position: absolute;
-    height: 700px;
-    top: 15%;
-    left: 50%;
+@media only screen and (min-width: 600px) {
+    .landingimage{
+        position: absolute;
+        height: 700px;
+        top: 15%;
+        left: 50%;
+    }
+
+    .frontpageimg{
+        height: 500px;
+        width: 500px;
+    }
+
+    .gridwrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0px;
+        /* grid-auto-rows: minmax(100px, auto); */
+        margin-left: 26rem;
+        margin-right: 23rem;
+        margin-top: 3rem;
+    }
+
+    .griditem{
+        margin-bottom: 4rem;
+    }
+
+    .trendingDrinks{
+        font-family: "Karla",Arial,Helvetica,sans-serif;
+        font-weight: 700;
+        font-size: 1.75rem;
+        margin-left: 23rem;
+        letter-spacing: 0.02rem;
+    }
+
+    .trendingSubText{
+        font-family: "Segoe UI", sans-serif;
+        letter-spacing: .5px;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: black;
+        margin-left: 23rem;
+        line-height: 1.8;
+    }
+
+    .drinkTitle{
+        margin-top: .5rem;
+        text-decoration: none;
+        position: relative;
+        z-index: 10;
+        left: 50%;
+        transform: translate(-55%, 0%);
+        color: #af181a;
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.4rem;
+        height: 10%;
+        font-family: "Segoe UI", sans-serif;
+        letter-spacing: 1px;
+    }
+    .search{
+        margin-left: 250px;
+    }
 }
 
-.frontpageimg{
-    height: 500px;
-    width: 500px;
-}
-
-.gridwrapper{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0px;
-    /* grid-auto-rows: minmax(100px, auto); */
-    margin-left: 26rem;
-    margin-right: 23rem;
-    margin-top: 3rem;
-}
-
-.griditem{
-    margin-bottom: 4rem;
-}
-
-.trendingDrinks{
-    font-family: "Karla",Arial,Helvetica,sans-serif;
-    font-weight: 700;
-    font-size: 1.75rem;
-    margin-left: 23rem;
-    letter-spacing: 0.02rem;
-}
-
-.trendingSubText{
-    font-family: "Segoe UI", sans-serif;
-    letter-spacing: .5px;
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: black;
-    margin-left: 23rem;
-    line-height: 1.8;
-}
-
-.drinkTitle{
-    margin-top: .5rem;
-    text-decoration: none;
-    position: relative;
-    z-index: 10;
-    left: 50%;
-    transform: translate(-55%, 0%);
-    color: #af181a;
-    text-align: center;
-    font-weight: 300;
-    font-size: 1.4rem;
-    height: 10%;
-    font-family: "Segoe UI", sans-serif;
-    letter-spacing: 1px;
+@media only screen and (max-width: 600px) {
+    .landingimage{
+        position: absolute;
+        height: 200px;
+        top: 15%;
+        left: 15%;
+    }
+    
+    .frontpageimg{
+        height: 300px;
+        width: 300px;
+    }
+    .gridwrapper{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0px;
+        /* grid-auto-rows: minmax(100px, auto); */
+        margin-left: 0rem;
+        margin-right: 0rem;
+        margin-top: 3rem;
+    }
+    .griditem{
+        margin-bottom: 4rem;
+        margin-left: 2.75rem;
+    }
+    
+    .trendingDrinks{
+        font-family: "Karla",Arial,Helvetica,sans-serif;
+        font-weight: 700;
+        font-size: 1.75rem;
+        margin-left: 2rem;
+        letter-spacing: 0.02rem;
+    }
+    
+    .trendingSubText{
+        font-family: "Segoe UI", sans-serif;
+        letter-spacing: .5px;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: black;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        line-height: 1.8;
+    }
+    
+    .drinkTitle{
+        margin-top: .5rem;
+        text-decoration: none;
+        position: relative;
+        z-index: 10;
+        left: 50%;
+        transform: translate(-55%, 0%);
+        color: #af181a;
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.4rem;
+        height: 10%;
+        font-family: "Segoe UI", sans-serif;
+        letter-spacing: 1px;
+    }
+    .category{
+        display: none;
+    }
+    .search{
+        margin-left: -300px;
+    }
+    .searchInput{
+        padding: .50rem 7.5rem !important;
+    }
+    
 }

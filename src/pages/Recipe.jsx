@@ -2,6 +2,7 @@ import React from 'react'
 import {useEffect, useState} from "react";
 import styled from "styled-components";
 import {useParams} from "react-router-dom";
+import "../components/base.css"
 
 function Recipe() {
   let params = useParams();
@@ -20,12 +21,12 @@ function Recipe() {
 
 
   return (
-    <DetailWrapper>
+    <DetailWrapper className='recipeWrapper'>
       <div>
         <h4>{details.strDrink}</h4>
-        <img src={details.strDrinkThumb} alt="" />
+        <img src={details.strDrinkThumb} alt="" className='recipeImage'/>
       </div>
-      <Info>
+      <Info className='info'>
         <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab("instructions")}>
           Instructions
           </Button>
@@ -33,7 +34,7 @@ function Recipe() {
           Ingredients
           </Button>
           {activeTab === 'instructions' && (
-              <div>
+            <div>
               <h3>{details.strTags}</h3>
               <h3>{details.strCategory}</h3>
               <h3>{details.strAlcoholic}</h3>
@@ -62,6 +63,10 @@ function Recipe() {
 
 
 const DetailWrapper = styled.div`
+  @media (max-width: 600px){
+    flex-direction: column;
+    margin: 2% 2%;
+  }
   margin: 4% 15%;
   border-radius: 1rem;
   display: flex;
@@ -103,7 +108,9 @@ const Button = styled.button`
   background: white;
   border: 2px solid black;
   margin-right: 2rem;
-  margin-top: 5rem;
+  @media (min-width: 600px){
+    margin-top: 5rem;
+  }
   font-weight: 600;
   &:hover {
     filter: brightness(1.2);
@@ -111,7 +118,9 @@ const Button = styled.button`
 `
 
 const Info = styled.div`
+@media (min-width: 600px){
   margin-left: 10rem;
+}
 `
 
 export default Recipe
