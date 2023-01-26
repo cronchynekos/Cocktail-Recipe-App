@@ -149,13 +149,14 @@ body::-webkit-scrollbar-thumb {
     font-size: 5.25rem;
     line-height: 7rem;
     z-index: 5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   .hero p {
     font-size: 1.5rem;
     /* text-shadow: 4px 4px 6px black; */
     color: black;
-    line-height: 2rem;
+    line-height: 2.5rem;
     margin-left: 13rem;
   }
 }

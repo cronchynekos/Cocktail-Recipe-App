@@ -83,7 +83,8 @@ const Logo = styled(Link)`
 
 const Nav = styled.div`
   padding: .8rem 4rem;
-  //border-bottom-style: solid;
+  border-bottom-style: solid;
+  border-width: 2px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -91,9 +92,9 @@ const Nav = styled.div`
   position: sticky;
   top: 0;
   z-index: 10;
-  // outline: 1px solid black;
   svg{
     font-size: 1.3rem;
+
   }
 `;
 //linear-gradient(35deg, #808080, #dadada)

@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
-import {Splide, SplideSlide} from '@splidejs/react-splide';
-import "@splidejs/react-splide/css";
 import {Link} from "react-router-dom";
 import "./base.css"
 
@@ -21,8 +18,9 @@ function Popular() {
             setCocktail(JSON.parse(check));
         }else{
             Promise.all([
-                fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=13621`).then(value => value.json()),
                 fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=178328`).then(value => value.json()),
+                fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=13535`).then(value => value.json()),
+                fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=13621`).then(value => value.json()),
                 fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=11224`).then(value => value.json()),
                 fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=11417`).then(value => value.json()),
                 fetch(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=17214`).then(value => value.json())
@@ -33,7 +31,8 @@ function Popular() {
                     var objectCopy2 = JSON.parse(JSON.stringify(value[2]));
                     var objectCopy3 = JSON.parse(JSON.stringify(value[3]));
                     var objectCopy4 = JSON.parse(JSON.stringify(value[4]));
-                    const final = [objectCopy.drinks[0], objectCopy1.drinks[0], objectCopy2.drinks[0], objectCopy3.drinks[0], objectCopy4.drinks[0]];
+                    var objectCopy5 = JSON.parse(JSON.stringify(value[5]));
+                    const final = [objectCopy.drinks[0], objectCopy1.drinks[0], objectCopy2.drinks[0], objectCopy3.drinks[0], objectCopy4.drinks[0], objectCopy5.drinks[0]];
                     localStorage.setItem("popular", JSON.stringify(final))
                     setCocktail(final);
                     console.log(final);
@@ -46,117 +45,24 @@ function Popular() {
 
     return (
         <div>
-            <Wrapper>
-                <h3>Trending Drinks</h3>
-                <p>Some of our most popular drink recipes, these recipes are easy and impressive.</p>
-                <Splide options={{
-                    perPage  : 3,
-                    arrows   : true,
-                    pagination: false,
-                    drag: "free",
-                    gap: "2rem",
-                    autoplay: true,
-                    perMove: 1,
-                    interval: 4000,
-                    type: 'loop',
-                    breakpoints: {
-                      1024: {
-                        perPage: 3,
-                      },
-                      767: {
-                        perPage: 2,
-                      },
-                      640: {
-                        perPage: 1,
-                      },
-                    },
-                }}> 
+            <h3 className="trendingDrinks">Trending Drinks</h3>
+            <p className="trendingSubText">Some of our most popular drink recipes, these recipes are easy and impressive.</p>
+            <div className="gridwrapper">
                 {cocktails.map((drink) => {
-                    return(
-                        <SplideSlide key ={drink.idDrink}>
-                            <Card>
-                                <Link to={'/Cocktail-Recipe-App/recipe/' + drink.idDrink}>
-                                <Gradient/>
-                                <p>{drink.strDrink}</p>
-                                <img src={drink.strDrinkThumb} alt={drink.strDrink} />
-                                <p>{Object.keys(drink)[0].strDrink}</p>
-                                </Link>
-                            </Card>
-                        </SplideSlide>
-                    );
-                })};
-                </Splide>
-            </Wrapper>
+                  return(
+                    <div className="griditem">
+                      <Link to={'/Cocktail-Recipe-App/recipe/' + drink.idDrink}>
+                      <img src={drink.strDrinkThumb} alt={drink.strDrink} className="frontpageimg"/>
+                      <p>{Object.keys(drink)[0].strDrink}</p>
+                      <p className="drinkTitle">{drink.strDrink}</p>
+                      </Link>
+                    </div>
+                  )
+                })}
+            </div>
+
         </div>
       );
     }
-
-    const Wrapper = styled.div`
-      background: none;
-      margin: 3% 10%;
-      padding: 1rem;
-      h3{
-        font-size: 1.75rem;
-        align-items: center;
-        display: flex;
-        justify-content: start;
-      }
-      p{
-        font-family: "Abel", sans-serif;
-        margin-bottom: 1rem;
-        letter-spacing: 1px;
-        font-size: 1.2rem;
-        font-weight: 300;
-        color: grey;
-      }
-    `
-
-    const Card = styled.div`
-      
-      border-radius: 2%;
-      position: relative;
-      overflow: visible;
-      &:hover {
-        filter: brightness(1.2);
-        transition: all 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
-      }
-      height: 100%;
-      img{
-        postion: absolute;
-        border-radius: 2%;
-        width: 100%;
-        height: 80%;
-        object-fit: cover;
-        overflow: visible;
-        
-      }
-      p{
-        position: absolute;
-        z-index: 10;
-        left: 50%;
-        bottom: -18%;
-        transform: translate(-50%, 0%);
-        color: #af181a;
-        width: 100%;
-        text-align: center;
-        font-weight: 300;
-        font-size: 1.4rem;
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: "Abel", sans-serif;
-        letter-spacing: 1px;
-      }
-    `;
-
-    const Gradient = styled.div`
-      border-radius: 0%;
-      z-index: 3;
-      position: absolute;
-      width: 100%;
-      height: 90%;
-      background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
-    `
 
 export default Popular;

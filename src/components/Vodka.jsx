@@ -29,57 +29,54 @@ function Vodka() {
       }
     };
 
-
-
   return (
     <div> 
-        <Wrapper>
-        
-      <h3>Vodka Cocktails</h3>
-      <p>A collection of the most popular vodka drinks.</p>
-      <Splide options={{
-          perPage: 4,
-          arrows: true,
-          pagination: false,
-          drag: "free",
-          gap: "2rem",
-          perMove: 1,
-          autoplay: true,
-          interval: 4000,
-          type: 'loop',
-          height: 330,
-          breakpoints: {
-            1400: {
-              height: 220,
-            },
-            1024: {
-              perPage: 3,
-            },
-            767: {
-              perPage: 2,
+      <Wrapper>
+        <h3>Vodka Cocktails</h3>
+        <p>A collection of the most popular vodka drinks.</p>
+        <Splide options={{
+            perPage: 4,
+            arrows: true,
+            pagination: false,
+            drag: "free",
+            gap: "2rem",
+            perMove: 1,
+            autoplay: true,
+            interval: 4000,
+            type: 'loop',
+            height: 330,
+            breakpoints: {
+              1400: {
+                height: 220,
+              },
+              1024: {
+                perPage: 3,
+              },
+              767: {
+                perPage: 2,
+            
+              },
+              640: {
+                perPage: 1,
           
+              },
             },
-            640: {
-              perPage: 1,
-        
-            },
-          },
-      }}> 
+        }}> 
       
-      {vodkas.map((drink) => {
+        {vodkas.map((drink) => {
           return(
-              <SplideSlide key ={drink.idDrink}>
-                <Card>
-                  <Link to={'/Cocktail-Recipe-App/recipe/' + drink.idDrink}>
-                  <Gradient/>
-                    <p>{drink.strDrink}</p>
-                    <img src={drink.strDrinkThumb} alt={drink.strDrink} />
-                    <p>{Object.keys(drink)[0].strDrink}</p>
-                  </Link>
-                </Card>
-              </SplideSlide>
+            <SplideSlide key ={drink.idDrink}>
+              <Card>
+                <Link to={'/Cocktail-Recipe-App/recipe/' + drink.idDrink}>
+                <Gradient/>
+                  <p>{drink.strDrink}</p>
+                  <img src={drink.strDrinkThumb} alt={drink.strDrink} />
+                  <p>{Object.keys(drink)[0].strDrink}</p>
+                </Link>
+              </Card>
+            </SplideSlide>
           );
-      })};
+        })};
       </Splide>
   </Wrapper> 
 </div>
@@ -88,9 +85,10 @@ function Vodka() {
 
 const Wrapper = styled.div`
       background: white;
-      margin: 0% 10%;
       padding: 1rem;
       height: 100%;
+      margin-left: 15rem;
+      margin-right: 15rem;
       h3{
         font-size: 1.5rem;
         display: flex;
@@ -109,7 +107,6 @@ const Wrapper = styled.div`
 
     const Card = styled.div`
     
-      border-radius: 1.5rem;
       overflow: hidden;
       position: relative;
       border-radius: 0%;
@@ -119,10 +116,7 @@ const Wrapper = styled.div`
         transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
       }
       img{
-        transform: translate(0px);
-        border-radius: 1.5rem;
         postion: absolute;
-        border-radius: 0%;
         left: 50%;
         width: 100%;
         height: 100%;
@@ -155,7 +149,6 @@ const Wrapper = styled.div`
       border-radius: 0%;
       width: 100%;
       height: 100%;
-      // background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2));
     `
 
     

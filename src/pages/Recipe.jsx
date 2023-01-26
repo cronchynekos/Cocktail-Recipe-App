@@ -103,6 +103,7 @@ const Button = styled.button`
   background: white;
   border: 2px solid black;
   margin-right: 2rem;
+  margin-top: 5rem;
   font-weight: 600;
   &:hover {
     filter: brightness(1.2);

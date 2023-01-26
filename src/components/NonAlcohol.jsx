@@ -42,7 +42,7 @@ function Mocktails() {
           arrows: true,
           pagination: false,
           drag: "free",
-          gap: "4rem",
+          gap: "2rem",
           perMove: 1,
           autoplay: true,
           interval: 4000,
@@ -71,7 +71,6 @@ function Mocktails() {
               <SplideSlide key ={drink.idDrink}>
                 <Card>
                   <Link to={'/Cocktail-Recipe-App/recipe/' + drink.idDrink}>
-                  <Gradient/>
                     <p>{drink.strDrink}</p>
                     <img src={drink.strDrinkThumb} alt={drink.strDrink} />
                     <p>{Object.keys(drink)[0].strDrink}</p>
@@ -87,9 +86,10 @@ function Mocktails() {
 }
 
 const Wrapper = styled.div`
-      margin: 0% 10%;
       padding: 1rem;
       height: 100%;
+      margin-left: 15rem;
+      margin-right: 15rem;
       h3{
         font-size: 1.5rem;
         display: flex;
@@ -107,19 +107,14 @@ const Wrapper = styled.div`
     `
 
     const Card = styled.div`
-      border-radius: 1.5rem;
-      overflow: hidden;
       position: relative;
-      border-radius: 0%;
       height: 100%;
       &:hover {
         filter: brightness(1.2);
         transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
       }
       img{
-        transform: translate(0px);
         postion: absolute;
-        border-radius: 0%;
         left: 50%;
         width: 100%;
         height: 100%;
@@ -146,14 +141,6 @@ const Wrapper = styled.div`
       }
     `;
 
-    const Gradient = styled.div`
-      z-index: 3;
-      position: absolute;
-      border-radius: 0%;
-      width: 100%;
-      height: 100%;
-      // background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2));
-    `
 
     
 

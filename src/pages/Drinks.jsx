@@ -45,16 +45,15 @@ const Grid = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     grid-gap: 3rem;
-    border-radius: 5% 20%;
     margin: 0% 12%;
+    margin-top: 3rem;
 
 `;
 const Card = styled.div`
-    border-radius: 5% 20%;
-    box-shadow: 10px 10px DarkSeaGreen;
     img{
         width: 100%;
-        border-radius: 2rem;
+        border-radius: 1rem;
+        box-shadow: 8px 8px grey;
     }
     a {
         text-decoration: none;
@@ -64,7 +63,8 @@ const Card = styled.div`
         padding: 1rem;
     }
     &:hover {
-        filter: brightness(1.1);
+        filter: brightness(1.15);
+        transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
       }
 `
 
