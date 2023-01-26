@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/Cocktail-Recipe-App/static/css/main.74f1c7f2.css",
-    "main.js": "/Cocktail-Recipe-App/static/js/main.4a343eae.js",
-    "static/media/landingpage2.png": "/Cocktail-Recipe-App/static/media/landingpage2.15053cd441db453a8465.png",
+    "main.css": "/Cocktail-Recipe-App/static/css/main.bac81fa9.css",
+    "main.js": "/Cocktail-Recipe-App/static/js/main.bb38ba00.js",
     "index.html": "/Cocktail-Recipe-App/index.html",
-    "main.74f1c7f2.css.map": "/Cocktail-Recipe-App/static/css/main.74f1c7f2.css.map",
-    "main.4a343eae.js.map": "/Cocktail-Recipe-App/static/js/main.4a343eae.js.map"
+    "main.bac81fa9.css.map": "/Cocktail-Recipe-App/static/css/main.bac81fa9.css.map",
+    "main.bb38ba00.js.map": "/Cocktail-Recipe-App/static/js/main.bb38ba00.js.map"
   },
   "entrypoints": [
-    "static/css/main.74f1c7f2.css",
-    "static/js/main.4a343eae.js"
+    "static/css/main.bac81fa9.css",
+    "static/js/main.bb38ba00.js"
   ]
 }
